@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Arial";
+    src: url("/arial.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url("../../assets/fonts/georgia.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-title: 'Georgia',
+serif;
+$font: 'Arial',
+sans-serif;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.title {
+    font-family: $font-title;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
