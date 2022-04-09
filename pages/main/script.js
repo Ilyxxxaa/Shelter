@@ -18,3 +18,28 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+document.addEventListener('click', (e) => { console.log(e.target); });
+
+const burgerBtn = document.querySelector('.burger__btn');
+const menu = document.querySelector('.menu');
+const menu__list = document.querySelector('.menu__list');
+const headerContent = document.querySelector('.header__content');
+const body = document.body;
+
+burgerBtn.addEventListener('click', clickBurger);
+menu__list.addEventListener('click', clickMenu);
+menu.addEventListener('click', clickMenu);
+
+
+function clickBurger() {
+    burgerBtn.classList.toggle('burger__btn--active');
+    menu.classList.toggle('menu--active');
+    body.classList.toggle('noscroll');
+}
+
+function clickMenu() {
+    menu.classList.remove('menu--active');
+    burgerBtn.classList.remove('burger__btn--active');
+    body.classList.remove('noscroll');
+
+}

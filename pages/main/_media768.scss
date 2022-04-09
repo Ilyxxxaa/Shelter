@@ -1,0 +1,177 @@
+        @media(max-width: 767px) {
+            .container {
+                padding: 0 10px;
+            }
+            .burger__btn {
+                z-index: 5;
+                margin-right: 43px;
+                cursor: pointer;
+                display: block;
+                &--active {
+                    transform: rotate(90deg);
+                }
+                &-line {
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    margin-bottom: 8px;
+                    background-color: #F1CDB3;
+                }
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 765px;
+                display: none;
+                background-color: rgba(41, 41, 41, 0.6);
+                justify-content: right;
+                align-items: center;
+                &--active {
+                    display: flex;
+                }
+                &__list {
+                    width: 320px;
+                    padding: 248px 28px 0 0;
+                    padding-inline-start: 28px;
+                    background-color: #292929;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    text-align: center;
+                    &-item {
+                        font-size: 32px;
+                        margin-bottom: 45px;
+                    }
+                    &-item+&-item {
+                        padding-left: 0px;
+                    }
+                }
+            }
+            .header {
+                &__content {
+                    min-height: 615px;
+                    background-size: 260px 272px;
+                    &-inner {
+                        width: 300px;
+                        text-align: center;
+                    }
+                    &-title {
+                        font-size: 25px;
+                        max-width: 226px;
+                        margin: 0 auto 43px;
+                    }
+                }
+            }
+            .title {
+                font-size: 25px;
+            }
+            .about {
+                padding: 42px 0 42px;
+                &__inner {
+                    flex-direction: column-reverse;
+                }
+                &__img {
+                    margin: 0 20px;
+                }
+                &__info {
+                    padding-bottom: 42px;
+                    &-title {
+                        text-align: center;
+                        width: 226px;
+                        margin: 0 auto 20px;
+                    }
+                }
+            }
+            .friends {
+                padding: 42px 0 42px;
+                &__title {
+                    margin: 0 auto 42px;
+                }
+                &__items {
+                    &-arrow {
+                        top: 507px;
+                        transform: translateY(-100%);
+                        &--left {
+                            left: 68px;
+                        }
+                        &--right {
+                            right: 68px;
+                        }
+                    }
+                }
+                &__content-item {
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+                &__btn-link {
+                    margin: 115px auto 0;
+                }
+            }
+            .help {
+                padding: 42px 0 42px;
+                &__content {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 30px;
+                }
+            }
+            .donations {
+                padding: 42px 0 42px;
+                text-align: center;
+                &__title {
+                    max-width: 260px;
+                    margin: 0 auto 20px;
+                    text-align: center;
+                }
+                &__info {
+                    max-width: 300px;
+                    min-width: 0px;
+                    &-name {
+                        max-width: 302px;
+                        text-align: center;
+                        margin: 0 auto 20px;
+                        letter-spacing: 0;
+                    }
+                    &-text {
+                        max-width: 300px;
+                        margin: 0 auto;
+                        text-align: justify;
+                    }
+                }
+                &__card-link {
+                    margin: 0 auto 20px;
+                    min-width: 281px;
+                }
+                &__card-number {
+                    font-size: 15px;
+                }
+                &__img {
+                    max-width: 260px;
+                    margin: 0 auto;
+                }
+            }
+            .footer {
+                padding-top: 30px;
+                &__inner {
+                    min-height: 809px;
+                    display: block;
+                    justify-content: space-between;
+                    background-position: center bottom;
+                    margin: 0 auto 0;
+                }
+                &__item {
+                    text-align: center;
+                    width: 300px;
+                    margin: 0 auto 40px auto;
+                    &:first-child {
+                        margin-right: auto;
+                    }
+                }
+            }
+        }

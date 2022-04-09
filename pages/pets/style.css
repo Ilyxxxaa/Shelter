@@ -64,8 +64,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 
 .header__logo {
@@ -257,18 +256,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: url("../../assets/images/footer-puppy.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 .footer__item {
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .footer__item-title {
   color: #FFFFFF;
-  margin-bottom: 40px;
+  margin: 16px 0 40px;
 }
 
 .footer__item-link {
@@ -294,6 +296,7 @@ body {
 
 .footer__item:first-child {
   width: 279px;
+  margin-right: 160px;
 }
 
 .footer__item:nth-child(2) {
@@ -302,8 +305,6 @@ body {
 
 .footer__item:last-child {
   padding-bottom: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 .margin40 {
@@ -312,5 +313,160 @@ body {
 
 .margin32 {
   margin-bottom: 32px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+  .friends {
+    padding: 80px 0 70px;
+  }
+  .friends-title {
+    margin: 0 auto 30px;
+  }
+  .friends__items-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 270px 270px;
+        grid-template-columns: 270px 270px;
+    width: 580px;
+    padding-bottom: 0px;
+    margin: 0 auto 40px;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+  .footer__inner {
+    min-height: 639px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-position: center bottom;
+    margin: 0 43px;
+  }
+  .footer__item:first-child {
+    width: 280px;
+    margin-right: 0;
+  }
+  .footer__item:last-child {
+    padding-bottom: 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .burger__btn {
+    z-index: 5;
+    margin-right: 43px;
+    cursor: pointer;
+    display: block;
+  }
+  .burger__btn--active {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .burger__btn-line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: #000000;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 765px;
+    display: none;
+    background-color: rgba(41, 41, 41, 0.6);
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu__list {
+    width: 320px;
+    padding: 248px 28px 0 0;
+    -webkit-padding-start: 28px;
+            padding-inline-start: 28px;
+    background-color: #f7f0eb;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: center;
+  }
+  .menu__list-item {
+    font-size: 32px;
+    margin-bottom: 45px;
+  }
+  .menu__list-item + .menu__list-item {
+    padding-left: 0px;
+  }
+  .friends {
+    padding: 42px 0 42px;
+  }
+  .friends-title {
+    margin: 0 auto 42px;
+  }
+  .friends__items-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 270px;
+        grid-template-columns: 270px;
+    width: 270px;
+    padding-bottom: 0px;
+    margin: 0 auto 40px;
+  }
+  .footer {
+    padding-top: 30px;
+  }
+  .footer__inner {
+    min-height: 809px;
+    display: block;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-position: center bottom;
+    margin: 0 auto 0;
+  }
+  .footer__item {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto 40px auto;
+  }
+  .footer__item:first-child {
+    margin-right: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
