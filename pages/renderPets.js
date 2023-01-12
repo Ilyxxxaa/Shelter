@@ -2,7 +2,7 @@ const friends = document.querySelector('.friends__items-slider');
 const modalOverlay = document.querySelector('.modal__overlay');
 
 async function getFriends() {
-  const response = await fetch('../pages/pets.json');
+  const response = await fetch('../../shelter/pages/pets.json');
   const friendsArray = await response.json();
   renderPets(friendsArray);
   await sliderActive(friendsArray);
