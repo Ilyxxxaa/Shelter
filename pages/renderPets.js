@@ -2,26 +2,24 @@ const friends = document.querySelector('.friends__items-slider');
 const modalOverlay = document.querySelector('.modal__overlay');
 
 async function getFriends() {
-    const response = await fetch('../pages/pets.json');
-    const friendsArray = await response.json();
-    renderPets(friendsArray);
-    await sliderActive(friendsArray);
-    await console.log('Render is end');
-    await modalWindow();
+  const response = await fetch('../pages/pets.json');
+  const friendsArray = await response.json();
+  renderPets(friendsArray);
+  await sliderActive(friendsArray);
+  await console.log('Render is end');
+  await modalWindow();
 }
 getFriends();
 
-
-
 function renderPets(array) {
-    array.forEach(item => {
-        //         const petsHTML = `<div class="friends__content-item">
-        // <img class="friends__item-img" src=${item.img} alt=${item.name}>
-        // <div class="friends__item-name">${item.name}</div>
-        // <a class="friends__item-link" href="#" data-name ="${item.name}">Learn more</a>
-        // </div>`;
-        // friends.insertAdjacentHTML('beforeend', petsHTML);
-        const petsModalHTML = `<div class="modal__window" data-modal ="${item.name}">
+  array.forEach((item) => {
+    //         const petsHTML = `<div class="friends__content-item">
+    // <img class="friends__item-img" src=${item.img} alt=${item.name}>
+    // <div class="friends__item-name">${item.name}</div>
+    // <a class="friends__item-link" href="#" data-name ="${item.name}">Learn more</a>
+    // </div>`;
+    // friends.insertAdjacentHTML('beforeend', petsHTML);
+    const petsModalHTML = `<div class="modal__window" data-modal ="${item.name}">
         <div class="modal__window-close-btn"></div>
         <div class="modal__img"><img class="modal__img-img" src="${item.img}" alt="${item.name}"></div>
         <div class="modal__content">
@@ -36,7 +34,7 @@ function renderPets(array) {
             </ul>
         </div>
     </div>`;
-        modalOverlay.insertAdjacentHTML('beforeend', petsModalHTML);
-        console.log('модальные окна добавлены');
-    });
+    modalOverlay.insertAdjacentHTML('beforeend', petsModalHTML);
+    console.log('модальные окна добавлены');
+  });
 }
