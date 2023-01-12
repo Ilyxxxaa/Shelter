@@ -2,10 +2,26 @@
     .container {
         padding: 0 30px;
     }
+    .header {
+        &__logo {
+            &-repeat {
+                display: none;
+            }
+        }
+    }
     .friends {
-        padding: 80px 0 70px;
-        &-title {
+        padding: 80px 0 75px;
+        &__title {
             margin: 0 auto 30px;
+        }
+        &__item-img {
+            margin-bottom: 23px;
+        }
+        &__item-name {
+            margin-bottom: 30px;
+        }
+        &__item-link {
+            padding: 13px 43px;
         }
         &__items {
             &-inner {
@@ -16,17 +32,26 @@
                 margin: 0 auto 40px;
             }
         }
+        &__content-item:nth-child(n+7) {
+            display: none;
+        }
+        &__buttons {
+            max-width: 357px;
+        }
     }
     .footer {
         padding-top: 30px;
         &__inner {
-            min-height: 639px;
+            min-height: 608px;
             display: flex;
             justify-content: space-between;
             background-position: center bottom;
-            margin: 0 43px;
+            margin: 0 34px;
         }
         &__item {
+            &-title {
+                margin-top: 0;
+            }
             &:first-child {
                 width: 280px;
                 margin-right: 0;
@@ -34,6 +59,33 @@
             &:last-child {
                 padding-bottom: 0;
                 align-self: flex-start;
+            }
+        }
+    }
+    .modal__window {
+        width: 630px;
+        height: 350px;
+    }
+    .modal__img {
+        width: 350px;
+        height: 350px;
+    }
+    .modal__content {
+        width: 260px;
+        margin: 10px 9px 37px 11px;
+        &-subtitle {
+            font-size: 20px;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+        &-descr {
+            font-size: 13px;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+        &-list {
+            &-item {
+                margin-bottom: 5px;
             }
         }
     }

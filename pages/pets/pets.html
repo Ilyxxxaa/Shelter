@@ -15,24 +15,29 @@
     <div class="header">
         <div class="container">
             <div class="header__top">
-                <div class="header__logo">
+                <div class="header__logo header__logo-origin">
                     <a class="header__logo-link" href="../../index.html"><span>Cozy House</span> Shelter for pets in Boston</a>
                 </div>
                 <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__list-item">
-                            <a class="menu__list-link " href="../../index.html">About the shelter</a>
-                        </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link menu__list-link--underline" href="../pets/pets.html">Our pets</a>
-                        </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="../../index.html#help">Help the shelter</a>
-                        </li>
-                        <li class="menu__list-item">
-                            <a class="menu__list-link" href="#contacts">Contacts</a>
-                        </li>
-                    </ul>
+                    <div class="menu-wrapper">
+                        <div class="header__logo header__logo-repeat">
+                            <a class="header__logo-link" href="#"><span>Cozy House</span> Shelter for pets in Boston</a>
+                        </div>
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link " href="../../index.html">About the shelter</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link menu__list-link--underline" href="#">Our pets</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="../../index.html#help">Help the shelter</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#contacts">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
                 <div class="burger__btn">
                     <span class="burger__btn-line"></span>
@@ -46,7 +51,7 @@
         <div class="container">
             <h2 class="friends__title title">Our friends who<br> are looking for a house</h2>
             <div class="friends__items-inner">
-                <div class="friends__content-item">
+                <!-- <div class="friends__content-item">
                     <img class="friends__item-img" src="../../assets/images/friends/katrine.png" alt="Katrine">
                     <div class="friends__item-name">Katrine</div>
                     <a class="friends__item-link" href="#">Learn more</a>
@@ -85,14 +90,14 @@
                     <img class="friends__item-img" src="../../assets/images/friends/freddie.png" alt="Freddie">
                     <div class="friends__item-name">Freddie</div>
                     <a class="friends__item-link" href="#">Learn more</a>
-                </div>
+                </div> -->
             </div>
             <div class="friends__buttons">
-                <button class="friends__btn friends__btn--disabled"><<</button>
-                <button class="friends__btn friends__btn--disabled"><</button>
+                <button class="friends__btn double__btn double__btn-left  friends__btn--disabled"><<</button>
+                <button class="friends__btn single__btn single__btn-left friends__btn--disabled"><</button>
                 <button class="friends__btn friends__btn--active">1</button>
-                <button class="friends__btn">></button>
-                <button class="friends__btn">>></button>
+                <button class="friends__btn single__btn single__btn-right">></button>
+                <button class="friends__btn double__btn double__btn-right ">>></button>
             </div>
         </div>
     </section>
@@ -116,7 +121,7 @@
                         <img class="footer__item-img" src="../../assets/images/pin.png" alt="pin">
                         <div class="footer__item-text">1 Central Street, Boston (entrance from the store)</div>
                     </a>
-                    <a class="footer__item-link" href="https://goo.gl/maps/mPVWDW7vjSDQF1HLA" target="_blank">
+                    <a class="footer__item-link footer__item-link--flexstart " href="https://goo.gl/maps/mPVWDW7vjSDQF1HLA" target="_blank">
                         <img class="footer__item-img" src="../../assets/images/pin.png" alt="pin">
                         <div class="footer__item-text">18 South Park, London </div>
                     </a>
@@ -124,8 +129,14 @@
             </div>
         </div>
     </footer>
+    <div class="modal__overlay"> </div>
 
+    <script src="renderPets.js"></script>
     <script src="script.js"></script>
+    <script src="pagination.js"></script>
+    <script src="modal.js"></script>
+
+
 </body>
 
 </html>

@@ -13,29 +13,36 @@
     <title>Cozy House</title>
 </head>
 
+
 <body>
     <header class="header">
         <div class="header__inner">
             <div class="container">
                 <div class="header__top">
-                    <div class="header__logo">
+                    <div class="header__logo header__logo-origin">
                         <a class="header__logo-link" href="#"><span>Cozy House</span> Shelter for pets in Boston</a>
                     </div>
                     <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a class="menu__list-link menu__list-link--underline" href="#">About the shelter</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a class="menu__list-link" href="pages/pets/pets.html">Our pets</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a class="menu__list-link" href="#help">Help the shelter</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a class="menu__list-link" href="#contacts">Contacts</a>
-                            </li>
-                        </ul>
+                        <div class="menu-wrapper">
+                            <div class="header__logo header__logo-repeat">
+                                <a class="header__logo-link" href="#"><span>Cozy House</span> Shelter for pets in Boston</a>
+                            </div>
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link menu__list-link--underline" href="#">About the shelter</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="pages/pets/pets.html">Our pets</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#help">Help the shelter</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#contacts">Contacts</a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </nav>
                     <div class="burger__btn">
                         <span class="burger__btn-line"></span>
@@ -53,6 +60,7 @@
             </div>
         </div>
     </header>
+
     <section class="about">
         <div class="container">
             <div class="about__inner">
@@ -75,20 +83,31 @@
             <div class="friends__items">
                 <button class="friends__items-arrow friends__items-arrow--left "><img class="friends__arrow-img" src="assets/images/arrow-left.png" alt="left-arrow"></button>
                 <div class="friends__items-inner">
-                    <div class="friends__content-item">
-                        <img class="friends__item-img" src="assets/images/friends/katrine.png" alt="Katrine">
-                        <div class="friends__item-name">Katrine</div>
-                        <a class="friends__item-link" href="#">Learn more</a>
-                    </div>
-                    <div class="friends__content-item">
-                        <img class="friends__item-img" src="assets/images/friends/jennifer.png" alt="Jennifer">
-                        <div class="friends__item-name">Jennifer</div>
-                        <a class="friends__item-link" href="#">Learn more</a>
-                    </div>
-                    <div class="friends__content-item">
-                        <img class="friends__item-img" src="assets/images/friends/woody.png" alt="Woody">
-                        <div class="friends__item-name">Woody</div>
-                        <a class="friends__item-link" href="#">Learn more</a>
+                    <div class="friends__items-slider">
+                        <div class="friends__items-item" id="item-left">
+
+                        </div>
+                        <div class="friends__items-item " id="item-active">
+                            <div class="friends__content-item">
+                                <img class="friends__item-img" src="assets/images/friends/katrine.png" alt="Katrine">
+                                <div class="friends__item-name">Katrine</div>
+                                <a class="friends__item-link" data-name="222" href="#">Learn more</a>
+                            </div>
+                            <div class="friends__content-item">
+                                <img class="friends__item-img" src="assets/images/friends/jennifer.png" alt="Jennifer">
+                                <div class="friends__item-name">Jennifer</div>
+                                <a class="friends__item-link" data-name="222" href="#">Learn more</a>
+                            </div>
+                            <div class="friends__content-item">
+                                <img class="friends__item-img" src="assets/images/friends/woody.png" alt="Woody">
+                                <div class="friends__item-name">Woody</div>
+                                <a class="friends__item-link" data-name="222" href="#">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="friends__items-item" id="item-right">
+
+
+                        </div>
                     </div>
                 </div>
                 <button class="friends__items-arrow friends__items-arrow--right "><img class="friends__arrow-img" src="assets/images/arrow-right.png" alt="right-arrow"</button>
@@ -182,9 +201,9 @@
                         <img class="footer__item-img" src="assets/images/pin.png" alt="pin">
                         <div class="footer__item-text">1 Central Street, Boston (entrance from the store)</div>
                     </a>
-                    <a class="footer__item-link" href="https://goo.gl/maps/mPVWDW7vjSDQF1HLA" target="_blank">
+                    <a class="footer__item-link footer__item-link--flexstart" href="https://goo.gl/maps/mPVWDW7vjSDQF1HLA" target="_blank">
                         <img class="footer__item-img" src="assets/images/pin.png" alt="pin">
-                        <div class="footer__item-text">18 South Park, London </div>
+                        <div class="footer__item-text  ">18 South Park, London </div>
                     </a>
                 </div>
 
@@ -192,12 +211,34 @@
         </div>
     </footer>
 
+    <div class="modal__overlay">
+        <!-- <div class="modal__window">
+            <div class="modal__window-close-btn"></div>
+            <div class="modal__img"><img class="modal__img-img" src="assets/images/friends/scarlett.png" alt=""></div>
+            <div class="modal__content">
+                <div class="modal__content-title">Jennifer</div>
+                <div class="modal__content-subtitle">Dog - Labrador</div>
+                <div class="modal__content-descr">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her
+                    favorite toys.</div>
+                <ul class="modal__content-list">
+                    <li class="modal__content-list-item"><span>Age:</span> 2 months</li>
+                    <li class="modal__content-list-item"><span>Age:</span> 2 months</li>
+                    <li class="modal__content-list-item"><span>Age:</span> 2 months</li>
+                    <li class="modal__content-list-item"><span>Age:</span> 2 months</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
 
 
 
 
 
+
+    <script src="pages/renderPets.js"></script>
     <script src="pages/main/script.js"></script>
+    <script src="pages/main/slider.js"></script>
+    <script src="pages/main/modal.js"></script>
 </body>
 
 </html>
