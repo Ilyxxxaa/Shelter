@@ -6,19 +6,13 @@ async function getFriends() {
   const friendsArray = await response.json();
   renderPets(friendsArray);
   await sliderActive(friendsArray);
-  await console.log('Render is end');
   await modalWindow();
 }
+
 getFriends();
 
 function renderPets(array) {
   array.forEach((item) => {
-    //         const petsHTML = `<div class="friends__content-item">
-    // <img class="friends__item-img" src=${item.img} alt=${item.name}>
-    // <div class="friends__item-name">${item.name}</div>
-    // <a class="friends__item-link" href="#" data-name ="${item.name}">Learn more</a>
-    // </div>`;
-    // friends.insertAdjacentHTML('beforeend', petsHTML);
     const petsModalHTML = `<div class="modal__window" data-modal ="${item.name}">
         <div class="modal__window-close-btn"></div>
         <div class="modal__img"><img class="modal__img-img" src="${item.img}" alt="${item.name}"></div>
@@ -35,6 +29,5 @@ function renderPets(array) {
         </div>
     </div>`;
     modalOverlay.insertAdjacentHTML('beforeend', petsModalHTML);
-    console.log('модальные окна добавлены');
   });
 }
